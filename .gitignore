@@ -1,0 +1,11 @@
+#sources
+sources
+
+#prepros
+*.cfg
+
+# node
+node_modules
+
+# ftp
+.ftppass

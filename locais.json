@@ -1,0 +1,135 @@
+[{
+    "nome": "Frutos do Brasil #1",
+    "localizacao": {
+        "pais": {
+            "nome": "Estados Unidos",
+            "slug": "eua"
+        },
+        "estado": "Goiás",
+        "cidade": "Goiânia",
+        "setor": "Cidade Jardim",
+        "cordenadas": {
+            "lat": -16.698111,
+            "lng": -49.296699
+        }
+    },
+    "tipo": {
+        "nome": "Ponto de Venda",
+        "slug": "ponto_de_venda"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.715036,
+            "lng": -49.273149
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.703537,
+            "lng": -49.297261
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.705053,
+            "lng": -49.300680
+        }
+    },
+    "tipo": {
+        "nome": "Pontos de Venda",
+        "slug": "ponto_de_venda"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.697134,
+            "lng": -49.284196
+        }
+    },
+    "tipo": {
+        "nome": "Pontos de Venda",
+        "slug": "ponto_de_venda"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.683006,
+            "lng": -49.288763
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil #2",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "br"
+        },
+        "estado": "Goiás",
+        "cidade": "Brasília",
+        "setor": "Papuda",
+        "cordenadas": {
+            "lat": -16.684815,
+            "lng": -49.272560
+        }
+    },
+    "tipo": {
+        "nome": "Pontos de Venda",
+        "slug": "ponto_de_venda"
+    }
+}]
+
