@@ -28,7 +28,6 @@ jQuery(document).ready(function($) {
 
                 // function add marker
                 addMarker(item);
-                console.log(item.localizacao.pais.slug);
             });
         });
     }
@@ -58,8 +57,9 @@ jQuery(document).ready(function($) {
             title: title,
             position: pos,
             icon: icons[marker.tipo.slug].icon,
-            animation: google.maps.Animation.DROP,
+            animation: google.maps.Animation.BOUNCE,
             map: map,
+            draggable:true,
         });
     }
 
