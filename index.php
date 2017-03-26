@@ -22,28 +22,28 @@
     <form action="" method="get" accept-charset="utf-8" id="buscar-locais">
         <div class="row">
             <div class="col-xs-2">
-                <select class="form-control">
-                    <option value="br">Brasil</option>
-                    <option value="eua">Estados Unidos</option>
+                <select class="form-control" id="pais">
+                    <option value="brasil">Brasil</option>
+                    <option value="estados-unidos">Estados Unidos</option>
                 </select>
             </div>
 
             <div class="col-xs-2">
-                <select class="form-control">
+                <select class="form-control" id="estado">
                     <option value="">Estado</option>
                     <option value="goias">Goiás</option>
                 </select>
             </div>
 
             <div class="col-xs-2">
-                <select class="form-control">
+                <select class="form-control" id="cidade">
                     <option value="">Cidade</option>
                     <option value="goiania">Goiânia</option>
                 </select>
             </div>
 
             <div class="col-xs-2">
-                <select class="form-control">
+                <select class="form-control" id="setor">
                     <option value="">Setor</option>
                     <option value="cidade_jardim">Cidade Jardim</option>
                     <option value="parque_oeste">Parque Oeste</option>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-xs-2">
-                <select class="form-control">
+                <select class="form-control" id="tipo">
                     <option value="">Tipo</option>
                     <option value="estados_unidos">Loja</option>
                     <option value="ponto_de_venda">Ponto de Venda</option>

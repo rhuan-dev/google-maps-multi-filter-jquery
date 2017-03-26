@@ -1,9 +1,9 @@
 [{
-    "nome": "Frutos do Brasil #1",
+    "nome": "Frutos do Brasil Estados Unidos",
     "localizacao": {
         "pais": {
             "nome": "Estados Unidos",
-            "slug": "eua"
+            "slug": "estados-unidos"
         },
         "estado": {
             "nome": "Califórnia",
@@ -14,13 +14,14 @@
             "slug": "los-angeles"
         },
         "setor": {
-            "nome": "Los Santos",
-            "slug": "los-santos"
+            "nome": "Santa Mônica",
+            "slug": "santa-monica"
         },
         "cordenadas": {
-            "lat": -16.698111,
-            "lng": -49.296699
-        }
+            "lat": 34.019357,
+            "lng": -118.491138
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Ponto de Venda",
@@ -48,7 +49,8 @@
         "cordenadas": {
             "lat": -16.697648,
             "lng": -49.295111
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Loja",
@@ -76,11 +78,12 @@
         "cordenadas": {
             "lat": -16.710801,
             "lng": -49.296828
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
-        "nome": "Loja",
-        "slug": "loja"
+        "nome": "Ponto de Venda",
+        "slug": "ponto_de_venda"
     }
 }, {
     "nome": "Frutos do Brasil #1",
@@ -104,7 +107,8 @@
         "cordenadas": {
             "lat": -16.713103,
             "lng": -49.274855
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Ponto de Venda",
@@ -132,7 +136,8 @@
         "cordenadas": {
             "lat": -16.677887,
             "lng": -49.255999
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Ponto de Venda",
@@ -160,7 +165,8 @@
         "cordenadas": {
             "lat": -16.7177496,
             "lng": -49.26961499999999
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Loja",
@@ -188,7 +194,8 @@
         "cordenadas": {
             "lat": -16.683107,
             "lng": -49.27875640000002
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
     "tipo": {
         "nome": "Loja",
@@ -216,8 +223,10 @@
         "cordenadas": {
             "lat": -16.6495878,
             "lng": -49.22831980000001
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
         "nome": "Loja",
         "slug": "loja"
@@ -244,39 +253,13 @@
         "cordenadas": {
             "lat": -16.7106211,
             "lng": -49.264050399999974
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
-        "nome": "Loja",
-        "slug": "loja"
-    }
-}, {
-    "nome": "Frutos do Brasil T9",
-    "localizacao": {
-        "pais": {
-            "nome": "Brasil",
-            "slug": "brasil"
-        },
-        "estado": {
-            "nome": "Goiás",
-            "slug": "goias"
-        },
-        "cidade": {
-            "nome": "Goiânia",
-            "slug": "goiania"
-        },
-        "setor": {
-            "nome": "Vila dos Alpes",
-            "slug": "vila-dos-alpes"
-        },
-        "cordenadas": {
-            "lat": -16.7107746,
-            "lng": -49.297408099999984
-        }
-    },
-    "tipo": {
-        "nome": "Loja",
-        "slug": "loja"
+        "nome": "Ponto de Venda",
+        "slug": "ponto_de_venda"
     }
 }, {
     "nome": "Sorveteria Frutos do Cerrado",
@@ -300,8 +283,10 @@
         "cordenadas": {
             "lat": -16.6637306,
             "lng": -49.302183799999966
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
         "nome": "Loja",
         "slug": "loja"
@@ -328,8 +313,10 @@
         "cordenadas": {
             "lat": -16.6852438,
             "lng": -49.266556700000024
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
         "nome": "Loja",
         "slug": "loja"
@@ -356,8 +343,10 @@
         "cordenadas": {
             "lat": -16.7150502,
             "lng": -49.2731354
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
         "nome": "Loja",
         "slug": "loja"
@@ -384,10 +373,12 @@
         "cordenadas": {
             "lat": -16.711429,
             "lng": -49.258654999999976
-        }
+        },
+        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
     },
+    "telefone": "(62) 3575-2454",
     "tipo": {
-        "nome": "Loja",
-        "slug": "loja"
+        "nome": "Ponto de Venda",
+        "slug": "ponto_de_venda"
     }
 }]

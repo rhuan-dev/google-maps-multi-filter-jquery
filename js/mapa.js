@@ -1,7 +1,7 @@
 jQuery.noConflict();
 jQuery(document).ready(function($) {
     /**
-     * Initial Map
+     * Função inicializar mapa
      */
     function initMap() {
         // localização inicial
@@ -9,51 +9,64 @@ jQuery(document).ready(function($) {
 
         // opções mapa inicial
         var mapOptions = {
-            zoom: 13,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            panControl: false,
-            mapTypeControl: false,
+            zoom: 13, // zoom inicial mapa
+            center: myLatlng, // localização inicial
+            mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
+            mapTypeControl: false,  // desativa seleção de tipo de mapas
+            // draggable: false,   // desativa drag
+            scrollwheel: false, // desativa scroll zoom
         }
 
-        // Exibir o mapa na div #mapa;
+        // registra mapa na div #mapa como variável map
         map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
 
-        /**
-         * Extract locations
-         * Add Markers Positions
-         */
-        $.getJSON('locais.json', function(data, textStatus) {
-            $.each(data, function(i, item) {
-
-                // function add marker
-                addMarker(item);
-
-                console.log(item);
+        // Extrai informações do locais.json para criar marcadores
+        $.getJSON('locais.json', function(locais, textStatus) {
+            // loop para criar marcadores no mapa usando
+            // função addMarker()
+            $.each(locais, function(i, local) {
+                addMarker(local);
             });
         });
+
+
     }
 
 
     /**
-     * Função Adiciona marcadores função
+     * Função para registro de marcadores
      */
-    function addMarker(markerinfos) {
-        var title = markerinfos.nome;
-        var pos = new google.maps.LatLng(markerinfos.localizacao.cordenadas.lat, markerinfos.localizacao.cordenadas.lng);
+    function addMarker(markerinfo) {
+        // titulo marcador
+        var title = markerinfo.nome;
+        if (title == null) {
+            title = '';
+        }
 
-        // marcadores personalizados
+        // endereco completo marcador
+        var endereco = markerinfo.localizacao.endereco;
+        if (endereco == null) {
+            endereco = '';
+        }
+
+        // telefone marcador
+        var telefone = markerinfo.telefone;
+        if(telefone == null) {
+            telefone = ''
+        }
+
+        // posição lat e lng do marcador
+        var position = new google.maps.LatLng(markerinfo.localizacao.cordenadas.lat, markerinfo.localizacao.cordenadas.lng);
+
+        // imagens de marcadores personalizados
         var image_ponto = "http://i.imgur.com/q3FIwSJ.png";
         var image_loja = "http://i.imgur.com/ophJkM1.png";
 
         // marcadores personalizados para cada tipo de local
         var icons = {
-            // caso tipo local for loja como slug
             loja: {
                 icon: image_loja
             },
-
-            // caso tipo de local for ponto_de_venda como slug
             ponto_de_venda: {
                 icon: image_ponto
             }
@@ -61,23 +74,25 @@ jQuery(document).ready(function($) {
 
         // registro de marcadores
         var marker = new google.maps.Marker({
-            title: title,
-            position: pos,
-            icon: icons[markerinfos.tipo.slug].icon,
-            animation: google.maps.Animation.DROP,
-            draggable: true,
-            map: map,
+            title: title, // titulo marcador
+            position: position, // posicao marcador
+            icon: icons[markerinfo.tipo.slug].icon, // usa icone certo para cada tipo de marcador
+            animation: google.maps.Animation.DROP, // animação drop marcador
+            map: map, // registra marcador na variável map
         });
 
-        // info window content
+        // registro de conteúdo na caixa de informações
+        // do marcador
         var infowindow = new google.maps.InfoWindow({
-            content: title
+            content: '<div class="title-map" style="font-weight: 700;">' + title + '</div>' + '<div class="endereco">' + endereco + '</div>' + '<div class="telefone-map" style="font-weight: 700;">' + telefone + '</div>'
         });
 
-        // Open and close info window
+        // exibe marcador quando clicado
         // marker.addListener('click', function() {
         //     infowindow.open(map, marker);
         // });
+
+        // Exibe marcador quando hover
         marker.addListener('mouseover', function() {
             infowindow.open(map, marker);
         });
@@ -87,11 +102,10 @@ jQuery(document).ready(function($) {
 
     }
 
+    // filter country
+    function filterCountry(pais) {
 
-    $('#buscar-locais').submit(function(event) {
-        event.preventDefault();
-    });
-
+    }
 
     // init map on load page
     $(window).load(function() {
