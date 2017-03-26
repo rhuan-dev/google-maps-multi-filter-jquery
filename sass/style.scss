@@ -38,3 +38,15 @@
 
     background : #f3f3f3;
 }
+
+.gm-style-iw {
+    text-align: center;
+}
+
+// remove close button
+.gm-style-iw + div {
+    display    : none !important;
+    visibility : hidden !important;
+
+    opacity    : 0 !important;
+}

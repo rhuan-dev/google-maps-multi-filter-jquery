@@ -19,50 +19,52 @@
 
 <!-- filters -->
 <div class="container">
-    <div class="row">
-        <div class="col-xs-2">
-            <select class="form-control" onchange="filterMarkers(this.value);">
-                <option value="br">Brasil</option>
-                <option value="eua">Estados Unidos</option>
-            </select>
-        </div>
+    <form action="" method="get" accept-charset="utf-8" id="buscar-locais">
+        <div class="row">
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value="br">Brasil</option>
+                    <option value="eua">Estados Unidos</option>
+                </select>
+            </div>
 
-        <div class="col-xs-2">
-            <select class="form-control">
-                <option value="">Estado</option>
-                <option value="goias">Goiás</option>
-            </select>
-        </div>
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value="">Estado</option>
+                    <option value="goias">Goiás</option>
+                </select>
+            </div>
 
-        <div class="col-xs-2">
-            <select class="form-control">
-                <option value="">Cidade</option>
-                <option value="goiania">Goiânia</option>
-            </select>
-        </div>
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value="">Cidade</option>
+                    <option value="goiania">Goiânia</option>
+                </select>
+            </div>
 
-        <div class="col-xs-2">
-            <select class="form-control">
-                <option value="">Setor</option>
-                <option value="cidade_jardim">Cidade Jardim</option>
-                <option value="parque_oeste">Parque Oeste</option>
-            </select>
-        </div>
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value="">Setor</option>
+                    <option value="cidade_jardim">Cidade Jardim</option>
+                    <option value="parque_oeste">Parque Oeste</option>
+                </select>
+            </div>
 
-        <div class="col-xs-2">
-            <select class="form-control">
-                <option value="">Tipo</option>
-                <option value="estados_unidos">Loja</option>
-                <option value="ponto_de_venda">Ponto de Venda</option>
-            </select>
-        </div>
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value="">Tipo</option>
+                    <option value="estados_unidos">Loja</option>
+                    <option value="ponto_de_venda">Ponto de Venda</option>
+                </select>
+            </div>
 
-        <div class="col-xs-2">
-            <button type="submit" class=" btn btn-default btn-success" style="width: 100%;">
-                Pesquisar
-            </button>
+            <div class="col-xs-2">
+                <button type="submit" class=" btn btn-default btn-success" style="width: 100%;">
+                    Pesquisar
+                </button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 <!-- end filters -->
 

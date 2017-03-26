@@ -5,9 +5,18 @@
             "nome": "Estados Unidos",
             "slug": "eua"
         },
-        "estado": "Goiás",
-        "cidade": "Goiânia",
-        "setor": "Cidade Jardim",
+        "estado": {
+            "nome": "Califórnia",
+            "slug": "california"
+        },
+        "cidade": {
+            "nome": "Los Angeles",
+            "slug": "los-angeles"
+        },
+        "setor": {
+            "nome": "Los Santos",
+            "slug": "los-santos"
+        },
         "cordenadas": {
             "lat": -16.698111,
             "lng": -49.296699
@@ -18,18 +27,27 @@
         "slug": "ponto_de_venda"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil #1",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.715036,
-            "lng": -49.273149
+            "lat": -16.697648,
+            "lng": -49.295111
         }
     },
     "tipo": {
@@ -37,18 +55,27 @@
         "slug": "loja"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil #1",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.703537,
-            "lng": -49.297261
+            "lat": -16.710801,
+            "lng": -49.296828
         }
     },
     "tipo": {
@@ -56,56 +83,83 @@
         "slug": "loja"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil #1",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.705053,
-            "lng": -49.300680
+            "lat": -16.713103,
+            "lng": -49.274855
         }
     },
     "tipo": {
-        "nome": "Pontos de Venda",
+        "nome": "Ponto de Venda",
         "slug": "ponto_de_venda"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil #1",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.697134,
-            "lng": -49.284196
+            "lat": -16.677887,
+            "lng": -49.255999
         }
     },
     "tipo": {
-        "nome": "Pontos de Venda",
+        "nome": "Ponto de Venda",
         "slug": "ponto_de_venda"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.683006,
-            "lng": -49.288763
+            "lat": -16.7177496,
+            "lng": -49.26961499999999
         }
     },
     "tipo": {
@@ -113,23 +167,227 @@
         "slug": "loja"
     }
 }, {
-    "nome": "Frutos do Brasil #2",
+    "nome": "Frutos do Brasil",
     "localizacao": {
         "pais": {
             "nome": "Brasil",
-            "slug": "br"
+            "slug": "brasil"
         },
-        "estado": "Goiás",
-        "cidade": "Brasília",
-        "setor": "Papuda",
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
         "cordenadas": {
-            "lat": -16.684815,
-            "lng": -49.272560
+            "lat": -16.683107,
+            "lng": -49.27875640000002
         }
     },
     "tipo": {
-        "nome": "Pontos de Venda",
-        "slug": "ponto_de_venda"
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.6495878,
+            "lng": -49.22831980000001
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil Sorveteria",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.7106211,
+            "lng": -49.264050399999974
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos do Brasil T9",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.7107746,
+            "lng": -49.297408099999984
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Sorveteria Frutos do Cerrado",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.6637306,
+            "lng": -49.302183799999966
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Frutos de Goiás - Sorveteria e Açaiteria",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.6852438,
+            "lng": -49.266556700000024
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Grego Restaurante",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.7150502,
+            "lng": -49.2731354
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
+    }
+}, {
+    "nome": "Restaurante Pérolas do Sabor",
+    "localizacao": {
+        "pais": {
+            "nome": "Brasil",
+            "slug": "brasil"
+        },
+        "estado": {
+            "nome": "Goiás",
+            "slug": "goias"
+        },
+        "cidade": {
+            "nome": "Goiânia",
+            "slug": "goiania"
+        },
+        "setor": {
+            "nome": "Vila dos Alpes",
+            "slug": "vila-dos-alpes"
+        },
+        "cordenadas": {
+            "lat": -16.711429,
+            "lng": -49.258654999999976
+        }
+    },
+    "tipo": {
+        "nome": "Loja",
+        "slug": "loja"
     }
 }]
-

@@ -5,11 +5,11 @@ jQuery(document).ready(function($) {
      */
     function initMap() {
         // localização inicial
-        var myLatlng = new google.maps.LatLng(-16.698008, -49.296640);
+        var myLatlng = new google.maps.LatLng(-16.691079, -49.276891);
 
         // opções mapa inicial
         var mapOptions = {
-            zoom: 14,
+            zoom: 13,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             panControl: false,
@@ -36,37 +36,64 @@ jQuery(document).ready(function($) {
 
 
     /**
-     * Add marker functions
+     * Função Adiciona marcadores função
      */
-    function addMarker(marker) {
-        var title = marker.nome;
-        var pais = marker.localizacao.pais.slug;
-        var pos = new google.maps.LatLng(marker.localizacao.cordenadas.lat, marker.localizacao.cordenadas.lng);
+    function addMarker(markerinfos) {
+        var title = markerinfos.nome;
+        var pos = new google.maps.LatLng(markerinfos.localizacao.cordenadas.lat, markerinfos.localizacao.cordenadas.lng);
 
         // marcadores personalizados
         var image_ponto = "http://i.imgur.com/q3FIwSJ.png";
         var image_loja = "http://i.imgur.com/ophJkM1.png";
+
+        // marcadores personalizados para cada tipo de local
         var icons = {
+            // caso tipo local for loja como slug
             loja: {
                 icon: image_loja
             },
+
+            // caso tipo de local for ponto_de_venda como slug
             ponto_de_venda: {
                 icon: image_ponto
             }
         };
 
-        var locais = new google.maps.Marker({
+        // registro de marcadores
+        var marker = new google.maps.Marker({
             title: title,
             position: pos,
-            icon: icons[marker.tipo.slug].icon,
-            animation: google.maps.Animation.BOUNCE,
+            icon: icons[markerinfos.tipo.slug].icon,
+            animation: google.maps.Animation.DROP,
+            draggable: true,
             map: map,
-            // content: title,
         });
+
+        // info window content
+        var infowindow = new google.maps.InfoWindow({
+            content: title
+        });
+
+        // Open and close info window
+        // marker.addListener('click', function() {
+        //     infowindow.open(map, marker);
+        // });
+        marker.addListener('mouseover', function() {
+            infowindow.open(map, marker);
+        });
+        marker.addListener('mouseout', function() {
+            infowindow.close();
+        });
+
     }
 
 
-    // active map
+    $('#buscar-locais').submit(function(event) {
+        event.preventDefault();
+    });
+
+
+    // init map on load page
     $(window).load(function() {
         initMap();
     });
