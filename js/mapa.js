@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
 
         // Extrai informações do locais.json para criar marcadores
-        $.getJSON('stores.json', function (locais, textStatus) {
+        $.getJSON('locais.json', function (locais, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
             $.each(locais, function (i, local) {
@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
         var image_loja = "http://i.imgur.com/ophJkM1.png";
 
         // marcadores personalizados para cada tipo de local
-        var icons = {
+        var icones = {
             loja: {
                 icon: image_loja
             },
@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
         var marker = new google.maps.Marker({
             title: title, // titulo marcador
             position: position, // posicao marcador
-            icon: icons[markerinfo.tipo.slug].icon, // usa icone certo para cada tipo de marcador
+            icon: icones[markerinfo.tipo.slug].icon, // usa icone certo para cada tipo de marcador
             animation: google.maps.Animation.DROP, // animação drop marcador
             map: map, // registra marcador na variável map
         });
