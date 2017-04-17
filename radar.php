@@ -57,7 +57,7 @@
         }
 
         function addMarker(place) {
-           
+
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
@@ -67,7 +67,6 @@
                 }
             });
         
-
             google.maps.event.addListener(marker, 'click', function() {
                 service.getDetails(place, function(result, status) {
                     if (status !== google.maps.places.PlacesServiceStatus.OK) {
