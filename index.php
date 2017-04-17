@@ -76,7 +76,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- script mapa api google -->
-<script async src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCS2P2STjwd6KEIvL0MjFijB_76OJVkToA"></script>
+<script async src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBEU_lWiR4FYtkvfRagpk5Igj4lPFIzzhU"></script>
 
 <!-- mapa -->
 <script src="js/mapa.js" async></script>

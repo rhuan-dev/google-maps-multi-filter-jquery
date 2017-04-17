@@ -83,7 +83,7 @@
 
 <body>
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS2P2STjwd6KEIvL0MjFijB_76OJVkToA&callback=initMap&libraries=places,visualization" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEU_lWiR4FYtkvfRagpk5Igj4lPFIzzhU&callback=initMap&libraries=places,visualization" async defer></script>
 </body>
 
 </html>
