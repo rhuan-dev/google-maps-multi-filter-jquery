@@ -1,90 +1,64 @@
-[{
-    "nome": "Frutos do Brasil Estados Unidos",
-    "localizacao": {
-        "pais": {
-            "nome": "Estados Unidos",
-            "slug": "estados-unidos"
+[
+    {
+        "nome": "Ponto de Venda Brasil #1",
+        "localizacao": {
+            "pais": {
+                "nome": "Brasil",
+                "slug": "brasil"
+            },
+            "estado": {
+                "nome": "Goiás",
+                "slug": "goias"
+            },
+            "cidade": {
+                "nome": "Goiânia",
+                "slug": "goiania"
+            },
+            "setor": {
+                "nome": "Vila dos Alpes",
+                "slug": "vila-dos-alpes"
+            },
+            "cordenadas": {
+                "lat": -16.697648,
+                "lng": -49.295111
+            },
+            "endereco": "Endereço Completo aqui #1"
         },
-        "estado": {
-            "nome": "Califórnia",
-            "slug": "california"
-        },
-        "cidade": {
-            "nome": "Los Angeles",
-            "slug": "los-angeles"
-        },
-        "setor": {
-            "nome": "Santa Mônica",
-            "slug": "santa-monica"
-        },
-        "cordenadas": {
-            "lat": 34.019357,
-            "lng": -118.491138
-        },
-        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
+        "telefone": "65 9332-6545",
+        "tipo": {
+            "nome": "Loja",
+            "slug": "loja"
+        }
     },
-    "tipo": {
-        "nome": "Ponto de Venda",
-        "slug": "ponto_de_venda"
+    {
+        "nome": "Ponto de Venda Brasil #2",
+        "localizacao": {
+            "pais": {
+                "nome": "Brasil",
+                "slug": "brasil"
+            },
+            "estado": {
+                "nome": "Goiás",
+                "slug": "goias"
+            },
+            "cidade": {
+                "nome": "Goiânia",
+                "slug": "goiania"
+            },
+            "setor": {
+                "nome": "Vila dos Alpes",
+                "slug": "vila-dos-alpes"
+            },
+            "cordenadas": {
+                "lat": -16.710801,
+                "lng": -49.296828
+            },
+            "endereco": "Endereço Completo aqui #2"
+        },
+        "telefone": "65 9332-6545 / 4555-8788",
+        "tipo": {
+            "nome": "Ponto de Venda",
+            "slug": "ponto_de_venda"
+        }
     }
-}, {
-    "nome": "Frutos do Brasil #1",
-    "localizacao": {
-        "pais": {
-            "nome": "Brasil",
-            "slug": "brasil"
-        },
-        "estado": {
-            "nome": "Goiás",
-            "slug": "goias"
-        },
-        "cidade": {
-            "nome": "Goiânia",
-            "slug": "goiania"
-        },
-        "setor": {
-            "nome": "Vila dos Alpes",
-            "slug": "vila-dos-alpes"
-        },
-        "cordenadas": {
-            "lat": -16.697648,
-            "lng": -49.295111
-        },
-        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
-    },
-    "telefone": "65 9332-6545",
-    "tipo": {
-        "nome": "Loja",
-        "slug": "loja"
-    }
-}, {
-    "nome": "Frutos do Brasil #1",
-    "localizacao": {
-        "pais": {
-            "nome": "Brasil",
-            "slug": "brasil"
-        },
-        "estado": {
-            "nome": "Goiás",
-            "slug": "goias"
-        },
-        "cidade": {
-            "nome": "Goiânia",
-            "slug": "goiania"
-        },
-        "setor": {
-            "nome": "Vila dos Alpes",
-            "slug": "vila-dos-alpes"
-        },
-        "cordenadas": {
-            "lat": -16.710801,
-            "lng": -49.296828
-        },
-        "endereco": "Av. Americano do Brasil Qd. 1 Lt. 5A"
-    },
-    "telefone": "65 9332-6545 / 4555-8788",
-    "tipo": {
-        "nome": "Ponto de Venda",
-        "slug": "ponto_de_venda"
-    }
-}]
+]

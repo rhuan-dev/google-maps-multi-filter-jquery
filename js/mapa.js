@@ -1,5 +1,5 @@
 jQuery.noConflict();
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     /**
      * Função inicializar mapa
      */
@@ -15,16 +15,16 @@ jQuery(document).ready(function($) {
             mapTypeControl: false,  // desativa seleção de tipo de mapas
             // draggable: false,   // desativa drag
             scrollwheel: false, // desativa scroll zoom
-        }
+        };
 
-        // registra mapa na div #mapa como variável map
+        // registra novo mapa
         map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
 
         // Extrai informações do locais.json para criar marcadores
-        $.getJSON('locais.json', function(locais, textStatus) {
+        $.getJSON('locais.json', function (locais, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
-            $.each(locais, function(i, local) {
+            $.each(locais, function (i, local) {
                 addMarker(local);
             });
         });
@@ -37,36 +37,36 @@ jQuery(document).ready(function($) {
     function addMarker(markerinfo) {
         // titulo marcador
         var title = markerinfo.nome;
-        if (title == null) {
+        if (title === null) { 
             title = '';
         }
 
         // endereco completo marcador
         var endereco = markerinfo.localizacao.endereco;
-        if (endereco == null) {
+        if (endereco === null) {
             endereco = '';
         }
 
         // telefone marcador
         var telefone = markerinfo.telefone;
-        if(telefone == null) {
-            telefone = ''
+        if (telefone === null) {
+            telefone = '';
         }
 
         // posição lat e lng do marcador
         var position = new google.maps.LatLng(markerinfo.localizacao.cordenadas.lat, markerinfo.localizacao.cordenadas.lng);
 
         // imagens de marcadores personalizados
-        var image_ponto = "http://i.imgur.com/q3FIwSJ.png";
-        var image_loja = "http://i.imgur.com/ophJkM1.png";
+        var image_point = "http://i.imgur.com/q3FIwSJ.png";
+        var image_store = "http://i.imgur.com/ophJkM1.png";
 
         // marcadores personalizados para cada tipo de local
         var icons = {
             loja: {
-                icon: image_loja
+                icon: image_store
             },
             ponto_de_venda: {
-                icon: image_ponto
+                icon: image_point
             }
         };
 
@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
         });
 
         // exibe marcador quando clicado
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infowindow.open(map, marker);
         });
 
@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
     }
 
     // init map on load page
-    $(window).load(function() {
+    $(window).load(function () {
         initMap();
     });
 
