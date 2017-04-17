@@ -39,7 +39,7 @@ var browserSyncFiles = [
     '**/*.php',
     'assets/**',
     'js/**',
-    'locais.json',
+    'stores.json',
 
     '!node_modules/',
     '!node_modules/**',

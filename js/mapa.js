@@ -17,11 +17,11 @@ jQuery(document).ready(function ($) {
             scrollwheel: false, // desativa scroll zoom
         };
 
-        // registra novo mapa
+        // registra mapa na div #mapa como variável map
         map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
 
         // Extrai informações do locais.json para criar marcadores
-        $.getJSON('locais.json', function (locais, textStatus) {
+        $.getJSON('stores.json', function (locais, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
             $.each(locais, function (i, local) {
@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
     function addMarker(markerinfo) {
         // titulo marcador
         var title = markerinfo.nome;
-        if (title === null) { 
+        if (title === null) {
             title = '';
         }
 
@@ -57,16 +57,16 @@ jQuery(document).ready(function ($) {
         var position = new google.maps.LatLng(markerinfo.localizacao.cordenadas.lat, markerinfo.localizacao.cordenadas.lng);
 
         // imagens de marcadores personalizados
-        var image_point = "http://i.imgur.com/q3FIwSJ.png";
-        var image_store = "http://i.imgur.com/ophJkM1.png";
+        var image_ponto = "http://i.imgur.com/q3FIwSJ.png";
+        var image_loja = "http://i.imgur.com/ophJkM1.png";
 
         // marcadores personalizados para cada tipo de local
         var icons = {
             loja: {
-                icon: image_store
+                icon: image_loja
             },
             ponto_de_venda: {
-                icon: image_point
+                icon: image_ponto
             }
         };
 
