@@ -3,35 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Search for up to 200 places with Radar Search</title>
+    <title>Radar Locais</title>
     <style>
+        #map {
+            height: 100%;
+        }
         html,
         body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-        #map {
-            height: 100%;
-        }
     </style>
-
-
     <script>
         var map;
         var infoWindow;
         var service;
-        var markers = [];
-        var jsonArray;
 
         function initMap() {
-
-            map = new google.maps.Map(document.getElementById("map"), {
+            map = new google.maps.Map(document.getElementById('map'), {
+                mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
                 center: {
-                    lat: -16.6844262,
-                    lng: -49.2687195
+                    lat: -16.6427714,
+                    lng: -49.4025505
                 },
-                zoom: 13
+                zoom: 11
             });
 
             infoWindow = new google.maps.InfoWindow();
@@ -45,7 +41,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: 'Parque',
+                keyword: 'Sicoob',
             };
             service.radarSearch(request, callback);
         }
@@ -55,88 +51,32 @@
                 console.error(status);
                 return;
             }
-
             for (var i = 0, result; result = results[i]; i++) {
                 addMarker(result);
             }
         }
 
         function addMarker(place) {
-
-            var wait;
-
-            while (wait) {};
-
-            service.getDetails(place, function (result, status) {
-                if (status !== google.maps.places.PlacesServiceStatus.OK) {
-                    if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-                        wait = true;
-                        setTimeout("wait = true", 2000);
-                        //alert("OQL: " + status);
-                    } else {
-                        alert(status);
-                    }
-
-                    return;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: {
+                    url: 'http://m.celebrationsdiscjockeyservice.com/images/map-marker.png',
+                    anchor: new google.maps.Point(10, 10),
                 }
+            });
 
-                var marker;
-
-                marker = new google.maps.Marker({
-                    map: map,
-                    position: result.geometry.location,
-                    icon: {
-                        url: 'http://i.imgur.com/ophJkM1.png',
+            google.maps.event.addListener(marker, 'click', function() {
+                service.getDetails(place, function(result, status) {
+                    if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                        console.error(status);
+                        return;
                     }
-                });
-
-                // var teste = {
-                //     nome: result.name,
-                //     enderecoformatado: result.formatted_address,
-                //     localizacao: result.geometry.location,
-                //     telefone: result.international_phone_number,
-                //     categoria: result.types[0],
-                //     website: result.website,
-                //     endereco: result.address_components,
-                //     fotos: result.photos,
-                //     cidade: result.vicinity,
-                // };
-
-                var teste = {
-                    nome: result.name,
-                    localizacao: {
-                        cordenadas: result.geometry.location,
-                    },
-                }
-
-                // console.log(teste);
-
-                google.maps.event.addListener(marker, 'click', function () {
-
-                    var contentString = '<div id="content">' +
-                                        '<h1 id="firstHeading" class="firstHeading">' + result.name + '</h1>' +
-                                            '<div id="bodyContent">' +
-                                                '<p>' + result.formatted_address + '</p>' +
-                                            '</div>' +
-                                        '</div>';
-
-                    infoWindow.setContent(contentString);
+                    infoWindow.setContent(result.name);
                     infoWindow.open(map, marker);
                 });
-
-                markers.push(teste);
-
             });
         }
-
-        function gerarJson() {
-            jsonArray = JSON.stringify(markers);
-
-            console.log(jsonArray);
-        }
-
-        initMap();
-        gerarJson();
     </script>
 </head>
 
