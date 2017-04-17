@@ -5,7 +5,10 @@ jQuery(document).ready(function ($) {
      */
     function initMap() {
         // localização inicial
-        var myLatlng = new google.maps.LatLng(-16.691079, -49.276891);
+        var myLatlng = new google.maps.LatLng(
+            -16.691079, 
+            -49.276891
+        );
 
         // opções mapa inicial
         var mapOptions = {
