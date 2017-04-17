@@ -18,14 +18,14 @@ jQuery(document).ready(function ($) {
         };
 
         // registra mapa na div #mapa como variável map
-        map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
+        map = new google.maps.Map(document.getElementById("mapgoogle"), mapOptions);
 
         // Extrai informações do locais.json para criar marcadores
-        $.getJSON('locais.json', function (locais, textStatus) {
+        $.getJSON('stores.json', function (stores, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
-            $.each(locais, function (i, local) {
-                addMarker(local);
+            $.each(stores, function (i, store) {
+                addMarker(store);
             });
         });
     }
@@ -36,37 +36,31 @@ jQuery(document).ready(function ($) {
      */
     function addMarker(markerinfo) {
         // titulo marcador
-        var title = markerinfo.nome;
-        if (title === null) {
-            title = '';
-        }
+        var title = markerinfo.name;
+        if (title === null) { title = ''; }
 
         // endereco completo marcador
-        var endereco = markerinfo.localizacao.endereco;
-        if (endereco === null) {
-            endereco = '';
-        }
+        var address = markerinfo.location.full_address;
+        if (address === null) { address = ''; }
 
         // telefone marcador
-        var telefone = markerinfo.telefone;
-        if (telefone === null) {
-            telefone = '';
-        }
+        var phone = markerinfo.phone;
+        if (phone === null) { phone = ''; }
 
         // posição lat e lng do marcador
-        var position = new google.maps.LatLng(markerinfo.localizacao.cordenadas.lat, markerinfo.localizacao.cordenadas.lng);
+        var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
 
         // imagens de marcadores personalizados
-        var image_ponto = "http://i.imgur.com/q3FIwSJ.png";
-        var image_loja = "http://i.imgur.com/ophJkM1.png";
+        var image_point = "http://i.imgur.com/q3FIwSJ.png";
+        var image_store = "http://i.imgur.com/ophJkM1.png";
 
         // marcadores personalizados para cada tipo de local
-        var icones = {
+        var icons = {
             loja: {
-                icon: image_loja
+                icon: image_store
             },
             ponto_de_venda: {
-                icon: image_ponto
+                icon: image_point
             }
         };
 
@@ -74,7 +68,7 @@ jQuery(document).ready(function ($) {
         var marker = new google.maps.Marker({
             title: title, // titulo marcador
             position: position, // posicao marcador
-            icon: icones[markerinfo.tipo.slug].icon, // usa icone certo para cada tipo de marcador
+            icon: icons[markerinfo.type.slug].icon, // usa icone certo para cada tipo de marcador
             animation: google.maps.Animation.DROP, // animação drop marcador
             map: map, // registra marcador na variável map
         });
@@ -82,7 +76,7 @@ jQuery(document).ready(function ($) {
         // registro de conteúdo na caixa de informações
         // do marcador
         var infowindow = new google.maps.InfoWindow({
-            content: '<div class="title-map">' + title + '</div>' + '<div class="endereco">' + endereco + '</div>' + '<div class="telefone-map">' + telefone + '</div>'
+            content: '<div class="title-map">' + title + '</div>' + '<div class="endereco">' + address + '</div>' + '<div class="telefone-map">' + phone + '</div>'
         });
 
         // exibe marcador quando clicado
@@ -101,7 +95,7 @@ jQuery(document).ready(function ($) {
     }
 
     // filter country
-    function filterCountry(pais) {
+    function filterCountry(country) {
 
     }
 

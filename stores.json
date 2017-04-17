@@ -1,0 +1,64 @@
+[
+    {
+        "name": "Loja Brasil #1",
+        "location": {
+            "country": {
+                "name": "Brasil",
+                "slug": "brasil"
+            },
+            "state": {
+                "name": "Goiás",
+                "slug": "goias"
+            },
+            "city": {
+                "name": "Goiânia",
+                "slug": "goiania"
+            },
+            "district": {
+                "name": "Vila dos Alpes",
+                "slug": "vila-dos-alpes"
+            },
+            "coordinates": {
+                "lat": -16.697648,
+                "lng": -49.295111
+            },
+            "full_address": "Endereço Completo aqui #1"
+        },
+        "phone": "65 9332-6545",
+        "type": {
+            "name": "Loja",
+            "slug": "loja"
+        }
+    },
+    {
+        "name": "Ponto de Venda Brasil #2",
+        "location": {
+            "country": {
+                "name": "Brasil",
+                "slug": "brasil"
+            },
+            "state": {
+                "name": "Goiás",
+                "slug": "goias"
+            },
+            "city": {
+                "name": "Goiânia",
+                "slug": "goiania"
+            },
+            "district": {
+                "name": "Vila dos Alpes",
+                "slug": "vila-dos-alpes"
+            },
+            "coordinates": {
+                "lat": -16.710801,
+                "lng": -49.296828
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Ponto de Venda",
+            "slug": "ponto_de_venda"
+        }
+    }
+]

@@ -15,7 +15,7 @@
 <body>
 
 <!-- mapa iframe -->
-<div id="mapa"></div>
+<div id="mapgoogle"></div>
 <!-- fim mapa iframe -->
 
 <!-- filters -->
