@@ -41,7 +41,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: 'Parque'
+                keyword: 'Sicoob'
             };
             service.radarSearch(request, callback);
         }
