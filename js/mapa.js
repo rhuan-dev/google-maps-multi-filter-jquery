@@ -28,8 +28,6 @@ jQuery(document).ready(function($) {
                 addMarker(local);
             });
         });
-
-
     }
 
 
@@ -84,21 +82,21 @@ jQuery(document).ready(function($) {
         // registro de conteúdo na caixa de informações
         // do marcador
         var infowindow = new google.maps.InfoWindow({
-            content: '<div class="title-map" style="font-weight: 700;">' + title + '</div>' + '<div class="endereco">' + endereco + '</div>' + '<div class="telefone-map" style="font-weight: 700;">' + telefone + '</div>'
+            content: '<div class="title-map">' + title + '</div>' + '<div class="endereco">' + endereco + '</div>' + '<div class="telefone-map">' + telefone + '</div>'
         });
 
         // exibe marcador quando clicado
-        // marker.addListener('click', function() {
-        //     infowindow.open(map, marker);
-        // });
-
-        // Exibe marcador quando hover
-        marker.addListener('mouseover', function() {
+        marker.addListener('click', function() {
             infowindow.open(map, marker);
         });
-        marker.addListener('mouseout', function() {
-            infowindow.close();
-        });
+
+        // Exibe marcador quando hover
+        // marker.addListener('mouseover', function() {
+        //     infowindow.open(map, marker);
+        // });
+        // marker.addListener('mouseout', function() {
+        //     infowindow.close();
+        // });
 
     }
 
