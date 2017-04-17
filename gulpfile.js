@@ -20,15 +20,15 @@ var browserSync = require('browser-sync').create();
 
 // main sass files
 var sassMainFiles = [
-  'sass/**/*.scss',
+    'sass/**/*.scss',
 ];
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     gulp.src(sassMainFiles)
-      .pipe(plumber())
-      .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(gulp.dest(''))
-      .pipe(browserSync.stream());
+        .pipe(plumber())
+        .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(gulp.dest(''))
+        .pipe(browserSync.stream());
 });
 
 
@@ -47,7 +47,7 @@ var browserSyncFiles = [
 ];
 
 // execute server and sass compilers
-gulp.task('server', ['sass'], function() {
+gulp.task('server', ['sass'], function () {
 
     // browser sync configs
     browserSync.init({
