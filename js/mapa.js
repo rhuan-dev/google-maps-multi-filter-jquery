@@ -1,5 +1,8 @@
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
+    // markers
+    var markers = [];
+    
     /**
      * Função inicializar mapa
      */
