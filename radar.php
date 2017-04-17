@@ -19,15 +19,15 @@
         var map;
         var infoWindow;
         var service;
-
+        
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
                 center: {
-                    lat: -16.6427714,
-                    lng: -49.4025505
+                    lat: -16.681201, 
+                    lng: -49.257864
                 },
-                zoom: 11
+                zoom: 15
             });
 
             infoWindow = new google.maps.InfoWindow();
@@ -41,7 +41,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: 'Sicoob',
+                keyword: 'Sicoob'
             };
             service.radarSearch(request, callback);
         }
@@ -57,14 +57,16 @@
         }
 
         function addMarker(place) {
+           
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: {
-                    url: 'http://m.celebrationsdiscjockeyservice.com/images/map-marker.png',
-                    anchor: new google.maps.Point(10, 10),
+                    url: 'http://i.imgur.com/ophJkM1.png',
+                    scaledSize: new google.maps.Size(30, 40)
                 }
             });
+        
 
             google.maps.event.addListener(marker, 'click', function() {
                 service.getDetails(place, function(result, status) {
