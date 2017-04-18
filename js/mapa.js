@@ -15,13 +15,13 @@ jQuery(document).ready(function ($) {
     function initMap() {
         // localização inicial
         var myLatlng = new google.maps.LatLng(
-            -16.691079, 
-            -49.276891
+            -14.0865322, 
+            -54.505771
         );
 
         // opções mapa inicial
         var mapOptions = {
-            zoom: 3, // zoom inicial mapa
+            zoom: 5, // zoom inicial mapa
             center: myLatlng, // localização inicial
             mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
         };
