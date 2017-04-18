@@ -53,7 +53,9 @@ jQuery(document).ready(function ($) {
             mc = new MarkerClusterer(map, markers, optionsCluster);
             
             // zoom para limite de todos marcadores registrado
-            map.fitBounds(bounds);
+            if (bounds.f.b != 1 && bounds.f.f != -1) {
+                map.fitBounds(bounds);
+            };
         });
     }
 
@@ -96,8 +98,6 @@ jQuery(document).ready(function ($) {
             district,
             type
         ];
-
-        // console.log(categories);
 
         // posição lat e lng do marcador
         var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
