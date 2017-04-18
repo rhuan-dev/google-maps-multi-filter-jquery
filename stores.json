@@ -122,5 +122,36 @@
             "name": "Ponto de Venda",
             "slug": "ponto_de_venda"
         }
+    },
+    {
+        "name": "Ponto de Venda Brasil #2",
+        "location": {
+            "country": {
+                "name": "Brasil",
+                "slug": "brasil"
+            },
+            "state": {
+                "name": "Goiás",
+                "slug": "goias"
+            },
+            "city": {
+                "name": "Goiânia",
+                "slug": "goiania"
+            },
+            "district": {
+                "name": "Vila dos Alpes",
+                "slug": "vila-dos-alpes"
+            },
+            "coordinates": {
+                "lat": -4.711707,
+                "lng": -64.898169
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Ponto de Venda",
+            "slug": "ponto_de_venda"
+        }
     }
 ]
