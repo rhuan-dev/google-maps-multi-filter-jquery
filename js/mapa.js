@@ -39,6 +39,7 @@ jQuery(document).ready(function ($) {
             // cluster config
             var optionsCluster = {
                 // imagePath: 'plugins/clusterer/images/m',
+                maxZoom: 13,
                 styles: [
                     {
                         textColor: '#ffffff',
