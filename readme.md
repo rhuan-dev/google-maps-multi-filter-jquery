@@ -1,6 +1,6 @@
 # Todo
 
-- [ ] Marker Cluster
+- [x] ~*Marker Cluster*~
 - [ ] Filter country
 - [ ] Filter state
 - [ ] Filter city
