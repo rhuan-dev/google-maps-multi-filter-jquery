@@ -76,10 +76,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- script mapa api google -->
-<script async src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBEU_lWiR4FYtkvfRagpk5Igj4lPFIzzhU"></script>
+<script async src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 <!--cluster-->
-<script async src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
 
 <!-- mapa -->
 <script src="js/mapa.js" async></script>
