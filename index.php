@@ -20,7 +20,7 @@
 
 <!-- filters -->
 <div class="container">
-    <form action="" method="get" accept-charset="utf-8" id="buscar-locais">
+    <form action="" id="buscar-locais">
         <div class="row">
             <div class="col-xs-2">
                 <select class="form-control" id="pais">
@@ -82,7 +82,7 @@
 <script async src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
 
 <!-- mapa -->
-<script src="js/mapa.js" async></script>
+<script async src="js/mapa.js"></script>
 
 
 </body>
