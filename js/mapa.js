@@ -2,6 +2,8 @@ jQuery.noConflict();
 jQuery(document).ready(function ($) {
     // markers
     var markers = [];
+    
+    // cluster
     var mc;
     
     /**
@@ -63,6 +65,31 @@ jQuery(document).ready(function ($) {
         // telefone marcador
         var phone = markerinfo.phone;
         if (phone === null) { phone = ''; }
+
+        // pais
+        var country = markerinfo.location.country.slug;
+        
+        // estado
+        var state = markerinfo.location.state.slug;
+
+        // cidade
+        var city = markerinfo.location.city.slug;
+
+        // setor
+        var district = markerinfo.location.district.slug;
+        
+        // tipo
+        var type = markerinfo.type.slug;
+
+        // todas categorias em um array
+        var categories = [
+            country,
+            state,
+            city,
+            district,
+            type
+        ];
+
 
         // posição lat e lng do marcador
         var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
