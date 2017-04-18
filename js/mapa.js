@@ -2,10 +2,13 @@ jQuery.noConflict();
 jQuery(document).ready(function ($) {
     // markers
     var markers = [];
-    
+
     // cluster
     var mc;
     
+    // bounds
+    var bounds = new google.maps.LatLngBounds();
+
     /**
      * Função inicializar mapa
      */
@@ -33,7 +36,6 @@ jQuery(document).ready(function ($) {
             $.each(stores, function (i, store) {
                 addMarker(store);
             });
-
             // cluster config
             var optionsCluster = {
                 // imagePath: 'plugins/clusterer/images/m',
@@ -45,8 +47,13 @@ jQuery(document).ready(function ($) {
                         height: 52
                     }
                 ]
-            };
+            };        
+
+            // clusters 
             mc = new MarkerClusterer(map, markers, optionsCluster);
+            
+            // zoom para limite de todos marcadores registrado
+            map.fitBounds(bounds);
         });
     }
 
@@ -90,6 +97,7 @@ jQuery(document).ready(function ($) {
             type
         ];
 
+        // console.log(categories);
 
         // posição lat e lng do marcador
         var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
@@ -119,6 +127,9 @@ jQuery(document).ready(function ($) {
         
         // adiciona markers ao array
         markers.push(marker);
+
+        // limite adicionado com posição de cada marcador
+        bounds.extend(marker.position);
 
         // registro de conteúdo na caixa de informações
         // do marcador
