@@ -34,7 +34,15 @@ jQuery(document).ready(function ($) {
 
             // cluster config
             var optionsCluster = {
-                imagePath: 'plugins/clusterer/images/m',
+                // imagePath: 'plugins/clusterer/images/m',
+                styles: [
+                    {
+                        textColor: '#ffffff',
+                        url: 'plugins/clusterer/images/m1.png',
+                        width: 53,
+                        height: 52
+                    }
+                ]
             };
             mc = new MarkerClusterer(map, markers, optionsCluster);
         });
