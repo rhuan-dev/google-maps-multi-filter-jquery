@@ -78,6 +78,9 @@
 <!-- script mapa api google -->
 <script async src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBEU_lWiR4FYtkvfRagpk5Igj4lPFIzzhU"></script>
 
+<!--cluster-->
+<script async src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
 <!-- mapa -->
 <script src="js/mapa.js" async></script>
 
