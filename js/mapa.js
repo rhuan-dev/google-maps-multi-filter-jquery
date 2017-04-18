@@ -2,7 +2,7 @@ jQuery.noConflict();
 jQuery(document).ready(function ($) {
     // markers
     var markers = [];
-    var markerCluster;
+    var mc;
     
     /**
      * Função inicializar mapa
@@ -19,9 +19,6 @@ jQuery(document).ready(function ($) {
             zoom: 3, // zoom inicial mapa
             center: myLatlng, // localização inicial
             mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
-            mapTypeControl: false,  // desativa seleção de tipo de mapas
-            // draggable: false,   // desativa drag
-            scrollwheel: false, // desativa scroll zoom
         };
 
         // registra mapa na div #mapa como variável map
@@ -34,13 +31,13 @@ jQuery(document).ready(function ($) {
             $.each(stores, function (i, store) {
                 addMarker(store);
             });
-        });
 
-        // cluster config
-        var optionsCluster = {
-            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-        };
-        var markerCluster = new MarkerClusterer(map, markers, optionsCluster);
+            // cluster config
+            var optionsCluster = {
+                imagePath: 'plugins/clusterer/images/m',
+            };
+            mc = new MarkerClusterer(map, markers, optionsCluster);
+        });
     }
 
     /**
@@ -84,6 +81,9 @@ jQuery(document).ready(function ($) {
             animation: google.maps.Animation.DROP, // animação drop marcador
             map: map, // registra marcador na variável map
         });
+        
+        // adiciona markers ao array
+        markers.push(marker);
 
         // registro de conteúdo na caixa de informações
         // do marcador
