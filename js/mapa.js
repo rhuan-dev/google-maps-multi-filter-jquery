@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
             // zoom para limite de todos marcadores registrado
             if (bounds.f.b != 1 && bounds.f.f != -1) {
                 map.fitBounds(bounds);
-            };
+            }
         });
     }
 
