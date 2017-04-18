@@ -53,9 +53,9 @@ jQuery(document).ready(function ($) {
             mc = new MarkerClusterer(map, markers, optionsCluster);
             
             // zoom para limite de todos marcadores registrado
-            if (bounds.f.b != 1 && bounds.f.f != -1) {
-                map.fitBounds(bounds);
-            }
+            // if (bounds.f.b != 1 && bounds.f.f != -1) {
+            //     map.fitBounds(bounds);
+            // }
         });
     }
 
