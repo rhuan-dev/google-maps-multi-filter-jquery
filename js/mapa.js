@@ -32,28 +32,17 @@ jQuery(document).ready(function ($) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
             $.each(stores, function (i, store) {
-                // addMarker(store);
+                addMarker(store);
             });
         });
 
+        // cluster config
         var optionsCluster = {
             imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
         };
-
-        var markers = locations.map(function (location, i) {            
-            return new google.maps.Marker({
-                position: location,
-            });
-        });
-
-        var markerCluster = new MarkerClusterer(map, markers, optionsCluster);     
-        console.log(markers);
+        var markerCluster = new MarkerClusterer(map, markers, optionsCluster);
     }
 
-    var locations = [
-        { lat: -16.697648, lng: -49.295111 },
-        { lat: -16.710801, lng: -49.296828 }
-    ];
     /**
      * Função para registro de marcadores
      */
