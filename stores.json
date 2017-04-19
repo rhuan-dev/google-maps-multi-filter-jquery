@@ -1,6 +1,6 @@
 [
     {
-        "name": "Loja Brasil #1",
+        "name": "Loja Goiás",
         "location": {
             "country": {
                 "name": "Brasil",
@@ -31,7 +31,7 @@
         }
     },
     {
-        "name": "Ponto de Venda Brasil #2",
+        "name": "Ponto de Venda Goiás",
         "location": {
             "country": {
                 "name": "Brasil",
@@ -62,27 +62,27 @@
         }
     },
     {
-        "name": "Ponto de Venda Brasil #2",
+        "name": "Ponto de Venda Rio de Janeiro",
         "location": {
             "country": {
                 "name": "Brasil",
                 "slug": "brasil"
             },
             "state": {
-                "name": "Goiás",
-                "slug": "goias"
+                "name": "Rio de Janeiro",
+                "slug": "rio-de-janeiro"
             },
             "city": {
-                "name": "Goiânia",
-                "slug": "goiania"
+                "name": "Nova Friburgo",
+                "slug": "nova-friburgo"
             },
             "district": {
-                "name": "Vila dos Alpes",
-                "slug": "vila-dos-alpes"
+                "name": "Santa Elisa",
+                "slug": "santa-elisa"
             },
             "coordinates": {
-                "lat": -16.680663,
-                "lng": -49.256394
+                "lat": -22.290793,
+                "lng": -42.522479
             },
             "full_address": "Endereço Completo aqui #2"
         },
@@ -93,27 +93,89 @@
         }
     },
     {
-        "name": "Ponto de Venda Brasil #2",
+        "name": "Loja Rio de Janeiro",
         "location": {
             "country": {
                 "name": "Brasil",
                 "slug": "brasil"
             },
             "state": {
-                "name": "Goiás",
-                "slug": "goias"
+                "name": "Rio de Janeiro",
+                "slug": "rio-de-janeiro"
             },
             "city": {
-                "name": "Goiânia",
-                "slug": "goiania"
+                "name": "Petrópolis",
+                "slug": "petropolis"
             },
             "district": {
-                "name": "Vila dos Alpes",
-                "slug": "vila-dos-alpes"
+                "name": "Alto da Serra",
+                "slug": "alto-da-serra"
             },
             "coordinates": {
-                "lat": -22.907301,
-                "lng": -43.172814
+                "lat": -22.517360,
+                "lng": -43.177397
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Loja",
+            "slug": "loja"
+        }
+    },
+    {
+        "name": "Loja Tocantins",
+        "location": {
+            "country": {
+                "name": "Brasil",
+                "slug": "brasil"
+            },
+            "state": {
+                "name": "Tocantins",
+                "slug": "tocantins"
+            },
+            "city": {
+                "name": "Palmas",
+                "slug": "palmas"
+            },
+            "district": {
+                "name": "Plano Diretor Sul",
+                "slug": "plano-diretor-sul"
+            },
+            "coordinates": {
+                "lat": -10.205764,
+                "lng": -48.331858
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Loja",
+            "slug": "loja"
+        }
+    },
+    {
+        "name": "Ponto de Venda Fortaleza",
+        "location": {
+            "country": {
+                "name": "Brasil",
+                "slug": "brasil"
+            },
+            "state": {
+                "name": "Ceará",
+                "slug": "ceara"
+            },
+            "city": {
+                "name": "Fortaleza",
+                "slug": "fortaleza"
+            },
+            "district": {
+                "name": "Montese",
+                "slug": "montese"
+            },
+            "coordinates": {
+                "lat": -3.766310,
+                "lng": -38.548628
             },
             "full_address": "Endereço Completo aqui #2"
         },
@@ -124,7 +186,7 @@
         }
     },
     {
-        "name": "Ponto de Venda Brasil #2",
+        "name": "Ponto de Venda Brasília",
         "location": {
             "country": {
                 "name": "Brasil",
@@ -135,16 +197,16 @@
                 "slug": "goias"
             },
             "city": {
-                "name": "Goiânia",
-                "slug": "goiania"
+                "name": "Brasília",
+                "slug": "brasilia"
             },
             "district": {
-                "name": "Vila dos Alpes",
-                "slug": "vila-dos-alpes"
+                "name": "Asa Norte",
+                "slug": "asa-norte"
             },
             "coordinates": {
-                "lat": -4.711707,
-                "lng": -64.898169
+                "lat": -15.764527,
+                "lng": -47.883081
             },
             "full_address": "Endereço Completo aqui #2"
         },
