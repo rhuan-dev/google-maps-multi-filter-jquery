@@ -141,10 +141,10 @@ jQuery(document).ready(function ($) {
         // exibe marcador quando clicado
         marker.addListener('click', function () {
             // zoom no marcador
-            map.setZoom(14);
+            // map.setZoom(14);
 
             // centraliza mapa na posição do marcador
-            map.setCenter(marker.getPosition());
+            // map.setCenter(marker.getPosition());
             
             // abre caixa informações marcador
             infowindow.open(map, marker);
