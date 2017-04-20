@@ -104,8 +104,8 @@ jQuery(document).ready(function ($) {
         var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
 
         // imagens de marcadores personalizados
-        var image_point = "http://i.imgur.com/q3FIwSJ.png";
-        var image_store = "http://i.imgur.com/ophJkM1.png";
+        var image_point = "assets/images/ponto.png";
+        var image_store = "assets/images/loja.png";
 
         // marcadores personalizados para cada tipo de local
         var icons = {
