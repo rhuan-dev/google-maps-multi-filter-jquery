@@ -36,14 +36,10 @@ gulp.task('sass', function () {
  * Browser sync server
  */
 var browserSyncFiles = [
-    '**/*.php',
+    '*.php',
     'assets/**',
     'js/**',
-    'stores.json',
-
-    '!node_modules/',
-    '!node_modules/**',
-    '!.git',
+    'plugins/**'
 ];
 
 // execute server and sass compilers
