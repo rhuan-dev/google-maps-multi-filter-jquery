@@ -215,5 +215,37 @@
             "name": "Ponto de Venda",
             "slug": "ponto_de_venda"
         }
+    },
+    {
+        "name": "Ponto de Venda Estados Unidos",
+        "location": {
+            "country": {
+                "name": "Estados Unidos",
+                "slug": "estados-unidos"
+            },
+            "state": {
+                "name": "Califórnia",
+                "slug": "california"
+            },
+            "city": {
+                "name": "São Francisco",
+                "slug": "sao-francisco"
+            },
+            "district": {
+                "name": "Castro",
+                "slug": "castro"
+            },
+            "coordinates": {
+                "lat": 37.761479,
+                "lng": -122.438289
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Ponto de Venda",
+            "slug": "ponto_de_venda"
+        }
     }
+    
 ]
