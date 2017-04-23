@@ -1,22 +1,22 @@
 [
     {
-        "name": "Loja Goiás",
+        "name": "Loja Estados Unidos",
         "location": {
             "country": {
-                "name": "Brasil",
-                "slug": "brasil"
+                "name": "Estados Unidos",
+                "slug": "estados-unidos"
             },
             "state": {
-                "name": "Goiás",
-                "slug": "goias"
+                "name": "Califórnia",
+                "slug": "california"
             },
             "city": {
-                "name": "Goiânia",
-                "slug": "goiania"
+                "name": "Sacramento",
+                "slug": "sacramento"
             },
             "district": {
-                "name": "Vila dos Alpes",
-                "slug": "vila-dos-alpes"
+                "name": "Midtown",
+                "slug": "midtown"
             },
             "coordinates": {
                 "lat": -16.697648,

@@ -1,9 +1,12 @@
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
+    // map
+    var map;
+
     // markers
     var markers = [];
 
-    // cluster
+    // cluster var
     var mc;
     
     // bounds
@@ -21,6 +24,7 @@ jQuery(document).ready(function ($) {
 
         // opções mapa inicial
         var mapOptions = {
+            maxZoom: 16,
             zoom: 5, // zoom inicial mapa
             center: myLatlng, // localização inicial
             mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
@@ -33,7 +37,7 @@ jQuery(document).ready(function ($) {
         $.getJSON('stores.json', function (stores, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
-            $.each(stores, function (i, store) {
+            $.each(stores, function (i, store) {                
                 addMarker(store);
             });
             // cluster config
@@ -124,6 +128,7 @@ jQuery(document).ready(function ($) {
             icon: icons[markerinfo.type.slug].icon, // usa icone certo para cada tipo de marcador
             animation: google.maps.Animation.DROP, // animação drop marcador
             map: map, // registra marcador na variável map
+            category: categories
         });
         
         // adiciona markers ao array
@@ -159,6 +164,45 @@ jQuery(document).ready(function ($) {
         // });
 
     }
+
+    /**
+     * Pais filter
+     */
+    $('#pais').change(function() {
+        var valSel = $(this).val();
+        console.log('selecionado ' + valSel);
+
+        // limite do mapa
+        bounds = new google.maps.LatLngBounds();
+
+        for (i = 0; i < markers.length; i++) {
+            // addMarker(markers[i]);
+            
+            var mark = markers[i];
+
+            // If is same category or category not picked
+            if ((typeof mark.category == 'object' && mark.category.indexOf(valSel) >= 0) || valSel.length == 0) {
+                mark.setVisible(true);
+                bounds.extend( mark.getPosition() );
+            }
+            // Categories don't match 
+            else {
+                mark.setVisible(false);
+            }
+            
+            console.log(markers[i].category);
+
+            console.log('categorias ' + markers[i].category);
+            console.log('posições ' + markers[i].getPosition() + '\n\n');
+            
+        }
+
+        // zoom mapa aos marcadores selecionados com 
+        // a categoria
+        map.fitBounds(bounds);
+    });
+
+    // console.log(markers);
 
     // init map on load page
     $(window).load(function () {
