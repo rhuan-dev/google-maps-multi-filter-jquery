@@ -183,10 +183,12 @@ jQuery(document).ready(function ($) {
             // If is same category or category not picked
             if ((typeof mark.category == 'object' && mark.category.indexOf(valSel) >= 0) || valSel.length === 0) {
                 mark.setVisible(true);
+                mc.setIgnoreHidden(true);
                 bounds.extend( mark.getPosition() );
             }
             // Categories don't match 
             else {
+                mc.setIgnoreHidden(true);
                 mark.setVisible(false);
             }
             
