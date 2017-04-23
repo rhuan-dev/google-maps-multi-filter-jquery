@@ -3,13 +3,13 @@ jQuery(document).ready(function ($) {
     // map
     var map;
 
-    // markers
+    // marcadores / lojas e pontos de distribuição no mapa
     var markers = [];
 
-    // cluster var
+    // cluster var para agrupar marcadores próximos em zoom pequeno
     var mc;
     
-    // bounds
+    // bounds / função limites do mapa
     var bounds = new google.maps.LatLngBounds();
 
     /**
@@ -24,43 +24,48 @@ jQuery(document).ready(function ($) {
 
         // opções mapa inicial
         var mapOptions = {
-            maxZoom: 16,
-            zoom: 5, // zoom inicial mapa
+            // zoom: 2, // zoom inicial mapa
+            maxZoom: 17, // zoom máximo
             center: myLatlng, // localização inicial
             mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
         };
 
-        // registra mapa na div #mapa como variável map
+        // registra mapa na div #mapa como variável mapgoogle
         map = new google.maps.Map(document.getElementById("mapgoogle"), mapOptions);
 
         // Extrai informações do locais.json para criar marcadores
         $.getJSON('stores.json', function (stores, textStatus) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
+            // para cada array em stores tem informações de um store
             $.each(stores, function (i, store) {                
                 addMarker(store);
             });
+
             // cluster config
+            // ajustes para exibição de ícone com marcadores agrupados
             var optionsCluster = {
-                // imagePath: 'plugins/clusterer/images/m',
-                maxZoom: 13,
+                maxZoom: 13, // máximo zoom exibido cluster
                 styles: [
                     {
-                        textColor: '#ffffff',
-                        url: 'plugins/clusterer/images/m1.png',
-                        width: 53,
-                        height: 52
+                        textColor: '#ffffff', // cor texto cluster
+                        url: 'plugins/clusterer/images/m1.png', // imagem fundo do cluster
+                        width: 53, // largura da imagem
+                        height: 52 // altura da imagem
                     }
                 ]
             };        
 
-            // clusters 
+            // suporte a clusters adicionado ao map
+            // map = variável do mapa
+            // markers = array de marcadores
+            // optionsCluster = options do cluster configurados acima
             mc = new MarkerClusterer(map, markers, optionsCluster);
             
-            // zoom para limite de todos marcadores registrado
-            // if (bounds.f.b != 1 && bounds.f.f != -1) {
-            //     map.fitBounds(bounds);
-            // }
+            // zoom para todos marcadores visíveis no ínicio
+            if (bounds.f.b != 1 && bounds.f.f != -1) {
+                map.fitBounds(bounds);
+            }
         });
     }
 
@@ -68,31 +73,31 @@ jQuery(document).ready(function ($) {
      * Função para registro de marcadores
      */
     function addMarker(markerinfo) {
-        // titulo marcador
+        // titulo do marcador
         var title = markerinfo.name;
         if (title === null) { title = ''; }
 
-        // endereco completo marcador
+        // endereco completo do marcador, deixa em branco se não há
         var address = markerinfo.location.full_address;
         if (address === null) { address = ''; }
 
-        // telefone marcador
+        // telefone do marcador, deixar em branco se não há
         var phone = markerinfo.phone;
         if (phone === null) { phone = ''; }
 
-        // pais
+        // pais do marcador
         var country = markerinfo.location.country.slug;
         
-        // estado
+        // estado do marcador
         var state = markerinfo.location.state.slug;
 
-        // cidade
+        // cidade do marcador
         var city = markerinfo.location.city.slug;
 
-        // setor
+        // setor do marcador
         var district = markerinfo.location.district.slug;
         
-        // tipo
+        // tipo do marcador
         var type = markerinfo.type.slug;
 
         // todas categorias em um array
@@ -111,7 +116,7 @@ jQuery(document).ready(function ($) {
         var image_point = "assets/images/ponto.png";
         var image_store = "assets/images/loja.png";
 
-        // marcadores personalizados para cada tipo de local
+        // imagem marcadores personalizados para cada tipo de local
         var icons = {
             loja: {
                 icon: image_store
@@ -169,8 +174,8 @@ jQuery(document).ready(function ($) {
      * Pais filter
      */
     $('#pais').change(function() {
-        var valSel = $(this).val();
-        console.log('selecionado ' + valSel);
+        // valor pais selecionado
+        var countryValSel = $(this).val();
 
         // limite do mapa
         bounds = new google.maps.LatLngBounds();
@@ -181,7 +186,7 @@ jQuery(document).ready(function ($) {
             var mark = markers[i];
 
             // If is same category or category not picked
-            if ((typeof mark.category == 'object' && mark.category.indexOf(valSel) >= 0) || valSel.length === 0) {
+            if ((typeof mark.category == 'object' && mark.category.indexOf(countryValSel) >= 0) || countryValSel.length === 0) {
                 mark.setVisible(true);
                 mc.setIgnoreHidden(true);
                 bounds.extend( mark.getPosition() );
