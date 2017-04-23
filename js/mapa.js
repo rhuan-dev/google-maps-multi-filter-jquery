@@ -181,7 +181,7 @@ jQuery(document).ready(function ($) {
             var mark = markers[i];
 
             // If is same category or category not picked
-            if ((typeof mark.category == 'object' && mark.category.indexOf(valSel) >= 0) || valSel.length == 0) {
+            if ((typeof mark.category == 'object' && mark.category.indexOf(valSel) >= 0) || valSel.length === 0) {
                 mark.setVisible(true);
                 bounds.extend( mark.getPosition() );
             }
