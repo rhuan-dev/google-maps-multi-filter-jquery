@@ -27,7 +27,7 @@
                     lat: -16.681201, 
                     lng: -49.257864
                 },
-                zoom: 18
+                zoom: 10
             });
 
             infoWindow = new google.maps.InfoWindow();
@@ -41,7 +41,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: 'Sicoob'
+                keyword: '"Frutos do Brasil"'
             };
             service.radarSearch(request, callback);
         }
@@ -62,8 +62,7 @@
                 map: map,
                 position: place.geometry.location,
                 icon: {
-                    url: 'http://i.imgur.com/ophJkM1.png',
-                    scaledSize: new google.maps.Size(30, 40)
+                    url: 'https://www.incinqueterre.com/images/google_marker_red.png'
                 }
             });
         
