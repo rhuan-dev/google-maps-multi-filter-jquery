@@ -7,20 +7,20 @@
                 "slug": "estados-unidos"
             },
             "state": {
-                "name": "Califórnia",
-                "slug": "california"
+                "name": "Kansas",
+                "slug": "kansas"
             },
             "city": {
-                "name": "Sacramento",
-                "slug": "sacramento"
+                "name": "Dighton",
+                "slug": "dighton"
             },
             "district": {
-                "name": "Midtown",
-                "slug": "midtown"
+                "name": "W Long St",
+                "slug": "w-long-st"
             },
             "coordinates": {
-                "lat": -16.697648,
-                "lng": -49.295111
+                "lat": 38.482035,
+                "lng": -100.466882
             },
             "full_address": "Endereço Completo aqui #1"
         },
