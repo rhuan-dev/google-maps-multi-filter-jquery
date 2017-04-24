@@ -174,44 +174,16 @@ jQuery(document).ready(function ($) {
      * Form filtro
      */
     $('#buscar-locais').change(function() {
-        var categoriesSel = [
+        // valor pais selecionado
+        // var countryValSel = $(this).val();
+
+        var countryValSel = [
             $('#pais').val(),
             $('#estado').val(),
             $('#cidade').val(),
             $('#setor').val(),
             $('#tipo').val(),
         ];
-
-        // console.log(typeof categoriesSel);
-        // console.log(categoriesSel);
-    });
-
-    function containsAll(needles, haystack) {
-        for (var i = 0, len = needles.length; i < len; i++) {
-            if ($.inArray(needles[i], haystack) == -1) return false;
-        }
-        return true;
-    }
-
-    console.log(containsAll([34, 78, 89], [78, 67, 34, 99, 56, 89])); // true)
-    
-
-    /**
-     * Pais filter
-     */
-    $('#pais, #estado, #cidade, #setor, #tipo').change(function() {
-        // valor pais selecionado
-        var countryValSel = $(this).val();
-
-        // var countryValSel = [
-        //     $('#pais').val(),
-        //     $('#estado').val(),
-        //     $('#cidade').val(),
-        //     $('#setor').val(),
-        //     $('#tipo').val(),
-        // ];
-
-        console.log(countryValSel);
 
         // limite do mapa
         bounds = new google.maps.LatLngBounds();
@@ -222,10 +194,11 @@ jQuery(document).ready(function ($) {
             var mark = markers[i];
 
             // If is same category or category not picked
-            if ((typeof mark.category == 'object' && mark.category.indexOf(countryValSel) >= 0) || countryValSel.length === 0) {
+            // if ((typeof mark.category == 'object' && mark.category.indexOf(countryValSel) >= 0) || countryValSel.length === 0) {
+            if (objectsMatch(mark.category, countryValSel) || countryValSel.length === 0) {
                 mark.setVisible(true);
                 mc.setIgnoreHidden(true);
-                bounds.extend( mark.getPosition() );
+                bounds.extend(mark.getPosition());
             }
             // Categories don't match 
             else {
@@ -233,11 +206,12 @@ jQuery(document).ready(function ($) {
                 mark.setVisible(false);
             }
             
-            console.log(typeof mark.category);
-            console.log(mark.category);
-            console.log(mark.category.indexOf(countryValSel));
+            // console.log(typeof mark.category);
+            // console.log(mark.category);
+            // console.log(mark.category.indexOf(countryValSel));
             // console.log('categorias ' + markers[i].category);
-            
+            // console.log(objectsMatch(mark.category, countryValSel));
+
         }
 
         // zoom mapa aos marcadores selecionados com 
@@ -251,5 +225,23 @@ jQuery(document).ready(function ($) {
     $(window).load(function () {
         initMap();
     });
+
+
+    /**
+     * Função verifica se objetos são identicos
+     */
+    function objectsMatch(roll, filterObject) {
+        var match = true;
+        for (var prop in filterObject) {
+            if (!roll.hasOwnProperty(prop) ||
+                !filterObject.hasOwnProperty(prop)) continue;
+            if (roll[prop] != filterObject[prop] &&
+                filterObject[prop] !== ''
+            ) {
+                match = false;
+            }
+        }
+        return match;
+    }
 
 });
