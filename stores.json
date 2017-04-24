@@ -246,6 +246,36 @@
             "name": "Ponto de Venda",
             "slug": "ponto_de_venda"
         }
+    },
+    {
+        "name": "Loja Espanha",
+        "location": {
+            "country": {
+                "name": "Espanha",
+                "slug": "espanha"
+            },
+            "state": {
+                "name": "Madrid",
+                "slug": "madrid"
+            },
+            "city": {
+                "name": "Fuelanbrada",
+                "slug": "fuelanbrada"
+            },
+            "district": {
+                "name": "Calle Montecarlo",
+                "slug": "calle-montecarlo"
+            },
+            "coordinates": {
+                "lat": 40.300899,
+                "lng": -3.822424
+            },
+            "full_address": "Endereço Completo aqui #2"
+        },
+        "phone": "65 9332-6545 / 4555-8788",
+        "type": {
+            "name": "Loja",
+            "slug": "loja"
+        }
     }
-    
 ]
