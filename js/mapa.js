@@ -173,10 +173,10 @@ jQuery(document).ready(function ($) {
     /**
      * Form filtro
      */
-    $('#buscar-locais').change(function() {
-        // valor pais selecionado
-        // var countryValSel = $(this).val();
-
+    $('#buscar-locais').submit(function(event) {
+        event.preventDefault();
+        
+        // valores filtros selecionado
         var countryValSel = [
             $('#pais').val(),
             $('#estado').val(),
@@ -201,16 +201,10 @@ jQuery(document).ready(function ($) {
                 bounds.extend(mark.getPosition());
             }
             // Categories don't match 
-            else {
+            else {                
                 mc.setIgnoreHidden(true);
                 mark.setVisible(false);
             }
-            
-            // console.log(typeof mark.category);
-            // console.log(mark.category);
-            // console.log(mark.category.indexOf(countryValSel));
-            // console.log('categorias ' + markers[i].category);
-            // console.log(objectsMatch(mark.category, countryValSel));
 
         }
 
@@ -218,8 +212,6 @@ jQuery(document).ready(function ($) {
         // a categoria
         map.fitBounds(bounds);
     });
-
-    // console.log(markers);
 
     // init map on load page
     $(window).load(function () {
