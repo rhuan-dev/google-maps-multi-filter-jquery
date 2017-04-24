@@ -118,10 +118,10 @@ jQuery(document).ready(function ($) {
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
-            loja: {
+            "loja": {
                 icon: image_store
             },
-            ponto_de_venda: {
+            "ponto": {
                 icon: image_point
             }
         };
