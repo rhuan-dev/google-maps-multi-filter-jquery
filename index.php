@@ -63,7 +63,7 @@
                 <select class="form-control" id="tipo">
                     <option value="">Tipo</option>
                     <option value="loja">Loja</option>
-                    <option value="ponto_de_venda">Ponto de Venda</option>
+                    <option value="ponto">Ponto de Venda</option>
                 </select>
             </div>
 
