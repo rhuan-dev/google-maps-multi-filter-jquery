@@ -27,6 +27,7 @@
                     <option value="">Pais</option>
                     <option value="brasil">Brasil</option>
                     <option value="estados-unidos">Estados Unidos</option>
+                    <option value="espanha">Espanha</option>
                 </select>
             </div>
 
@@ -36,6 +37,7 @@
                     <option value="goias">Goiás</option>
                     <option value="rio-de-janeiro">Rio de Janeiro</option>
                     <option value="california">Califórnia</option>
+                    <option value="madrid">Madrid</option>
                 </select>
             </div>
 
@@ -44,6 +46,7 @@
                     <option value="">Cidade</option>
                     <option value="goiania">Goiânia</option>
                     <option value="sao-francisco">São Francisco</option>
+                    <option value="fuelanbrada">Fuelanbrada</option>
                 </select>
             </div>
 
@@ -52,6 +55,7 @@
                     <option value="">Setor</option>
                     <option value="alto-da-serra">Alto da Serra</option>
                     <option value="castro">Castro</option>
+                    <option value="calle-montecarlo">Calle Montecarlo</option>
                 </select>
             </div>
 
