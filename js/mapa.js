@@ -171,11 +171,47 @@ jQuery(document).ready(function ($) {
     }
 
     /**
+     * Form filtro
+     */
+    $('#buscar-locais').change(function() {
+        var categoriesSel = [
+            $('#pais').val(),
+            $('#estado').val(),
+            $('#cidade').val(),
+            $('#setor').val(),
+            $('#tipo').val(),
+        ];
+
+        // console.log(typeof categoriesSel);
+        // console.log(categoriesSel);
+    });
+
+    function containsAll(needles, haystack) {
+        for (var i = 0, len = needles.length; i < len; i++) {
+            if ($.inArray(needles[i], haystack) == -1) return false;
+        }
+        return true;
+    }
+
+    console.log(containsAll([34, 78, 89], [78, 67, 34, 99, 56, 89])); // true)
+    
+
+    /**
      * Pais filter
      */
-    $('#pais').change(function() {
+    $('#pais, #estado, #cidade, #setor, #tipo').change(function() {
         // valor pais selecionado
         var countryValSel = $(this).val();
+
+        // var countryValSel = [
+        //     $('#pais').val(),
+        //     $('#estado').val(),
+        //     $('#cidade').val(),
+        //     $('#setor').val(),
+        //     $('#tipo').val(),
+        // ];
+
+        console.log(countryValSel);
 
         // limite do mapa
         bounds = new google.maps.LatLngBounds();
@@ -197,10 +233,10 @@ jQuery(document).ready(function ($) {
                 mark.setVisible(false);
             }
             
-            console.log(markers[i].category);
-
-            console.log('categorias ' + markers[i].category);
-            console.log('posições ' + markers[i].getPosition() + '\n\n');
+            console.log(typeof mark.category);
+            console.log(mark.category);
+            console.log(mark.category.indexOf(countryValSel));
+            // console.log('categorias ' + markers[i].category);
             
         }
 

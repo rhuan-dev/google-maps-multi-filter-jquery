@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col-xs-2">
                 <select class="form-control" id="pais">
+                    <option value="">Pais</option>
                     <option value="brasil">Brasil</option>
                     <option value="estados-unidos">Estados Unidos</option>
                 </select>
@@ -33,6 +34,8 @@
                 <select class="form-control" id="estado">
                     <option value="">Estado</option>
                     <option value="goias">Goiás</option>
+                    <option value="rio-de-janeiro">Rio de Janeiro</option>
+                    <option value="california">Califórnia</option>
                 </select>
             </div>
 
@@ -40,21 +43,22 @@
                 <select class="form-control" id="cidade">
                     <option value="">Cidade</option>
                     <option value="goiania">Goiânia</option>
+                    <option value="sao-francisco">São Francisco</option>
                 </select>
             </div>
 
             <div class="col-xs-2">
                 <select class="form-control" id="setor">
                     <option value="">Setor</option>
-                    <option value="cidade_jardim">Cidade Jardim</option>
-                    <option value="parque_oeste">Parque Oeste</option>
+                    <option value="alto-da-serra">Alto da Serra</option>
+                    <option value="castro">Castro</option>
                 </select>
             </div>
 
             <div class="col-xs-2">
                 <select class="form-control" id="tipo">
                     <option value="">Tipo</option>
-                    <option value="estados_unidos">Loja</option>
+                    <option value="loja">Loja</option>
                     <option value="ponto_de_venda">Ponto de Venda</option>
                 </select>
             </div>
