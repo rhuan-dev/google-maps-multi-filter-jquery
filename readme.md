@@ -2,11 +2,11 @@
 
 ### Front-end functions
 - [x] ~*Marker Cluster*~
-- [x] Filter country
-- [x] Filter state
-- [x] Filter city
-- [x] Filter district
-- [x] Filter types
+- [x] ~*Filter country*~
+- [x] ~*Filter state*~
+- [x] ~*Filter city*~
+- [x] ~*Filter district*~
+- [x] ~*Filter types*~
 
 ---
 
