@@ -14,3 +14,4 @@ This is a personal project, but you can contribute with it
 
 ## Features todo
 - [ ] Marker with drag drop
+- [ ] Database markers
