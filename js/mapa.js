@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 
     // cluster var para agrupar marcadores próximos em zoom pequeno
     var mc;
-    
+
     // bounds / função limites do mapa
     var bounds = new google.maps.LatLngBounds();
 
@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
     function initMap() {
         // localização inicial
         var myLatlng = new google.maps.LatLng(
-            -14.0865322, 
+            -14.0865322,
             -54.505771
         );
 
@@ -28,6 +28,7 @@ jQuery(document).ready(function ($) {
             maxZoom: 17, // zoom máximo
             center: myLatlng, // localização inicial
             mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
+            scrollwheel: false,
         };
 
         // registra mapa na div #mapa como variável mapgoogle
@@ -38,7 +39,7 @@ jQuery(document).ready(function ($) {
             // loop para criar marcadores no mapa usando
             // função addMarker()
             // para cada array em stores tem informações de um store
-            $.each(stores, function (i, store) {                
+            $.each(stores, function (i, store) {
                 addMarker(store);
             });
 
@@ -54,14 +55,14 @@ jQuery(document).ready(function ($) {
                         height: 52 // altura da imagem
                     }
                 ]
-            };        
+            };
 
             // suporte a clusters adicionado ao map
             // map = variável do mapa
             // markers = array de marcadores
             // optionsCluster = options do cluster configurados acima
             mc = new MarkerClusterer(map, markers, optionsCluster);
-            
+
             // zoom para todos marcadores visíveis no ínicio
             if (bounds.f.b != 1 && bounds.f.f != -1) {
                 map.fitBounds(bounds);
@@ -87,7 +88,7 @@ jQuery(document).ready(function ($) {
 
         // pais do marcador
         var country = markerinfo.location.country.slug;
-        
+
         // estado do marcador
         var state = markerinfo.location.state.slug;
 
@@ -96,7 +97,7 @@ jQuery(document).ready(function ($) {
 
         // setor do marcador
         var district = markerinfo.location.district.slug;
-        
+
         // tipo do marcador
         var type = markerinfo.type.slug;
 
@@ -135,7 +136,7 @@ jQuery(document).ready(function ($) {
             map: map, // registra marcador na variável map
             category: categories
         });
-        
+
         // adiciona markers ao array
         markers.push(marker);
 
@@ -155,7 +156,7 @@ jQuery(document).ready(function ($) {
 
             // centraliza mapa na posição do marcador
             // map.setCenter(marker.getPosition());
-            
+
             // abre caixa informações marcador
             infowindow.open(map, marker);
         });
@@ -175,7 +176,7 @@ jQuery(document).ready(function ($) {
      */
     $('#buscar-locais').submit(function(event) {
         event.preventDefault();
-        
+
         // valores filtros selecionado
         var countryValSel = [
             $('#pais').val(),
@@ -190,7 +191,7 @@ jQuery(document).ready(function ($) {
 
         for (i = 0; i < markers.length; i++) {
             // addMarker(markers[i]);
-            
+
             var mark = markers[i];
 
             // If is same category or category not picked
@@ -200,15 +201,15 @@ jQuery(document).ready(function ($) {
                 mc.setIgnoreHidden(true);
                 bounds.extend(mark.getPosition());
             }
-            // Categories don't match 
-            else {                
+            // Categories don't match
+            else {
                 mc.setIgnoreHidden(true);
                 mark.setVisible(false);
             }
 
         }
 
-        // zoom mapa aos marcadores selecionados com 
+        // zoom mapa aos marcadores selecionados com
         // a categoria
         map.fitBounds(bounds);
     });
