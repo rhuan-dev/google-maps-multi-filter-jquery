@@ -9,9 +9,3 @@ This is a personal project, but you can contribute with it
 
 ### Codepen Demo
 <a href="http://codepen.io/rhcarlosweb/pen/wdKLQG" target="_blank">See Demo Here</a>
-
------
-
-## Features todo
-- [ ] Marker with drag drop
-- [ ] WordPress plugin
