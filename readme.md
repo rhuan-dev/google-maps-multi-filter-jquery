@@ -9,3 +9,9 @@ This is a personal project, but you can contribute with it
 
 ### Codepen Demo
 <a href="http://codepen.io/rhcarlosweb/pen/wdKLQG" target="_blank">See Demo Here</a>
+
+## To-do
+
+- [ ] Search text field
+- [ ] WordPress Plugin
+- [ ] Admin panel style
