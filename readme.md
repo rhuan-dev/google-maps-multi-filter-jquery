@@ -13,5 +13,3 @@ This is a personal project, but you can contribute with it
 ## To-do
 
 - [ ] Search text field
-- [ ] WordPress Plugin
-- [ ] Admin panel style
