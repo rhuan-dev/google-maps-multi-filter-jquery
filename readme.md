@@ -8,7 +8,7 @@ This is a personal project, but you can contribute with it
 <img src="http://image.prntscr.com/image/1dde328cec344b41944cf47d3cfe1b47.jpeg">
 
 ### Codepen Demo
-<a href="http://codepen.io/rhcarlosweb/pen/wdKLQG" target="_blank">See Demo Here</a>
+<a href="https://codepen.io/rhcarlosweb/full/wdKLQG" target="_blank">See Demo Here</a>
 
 ## To-do
 
