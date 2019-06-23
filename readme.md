@@ -2,8 +2,6 @@
 
 The intent of this map was initially to put various filters such as countries, states, cities, districts and type of stores
 
-This is a personal project, but you can contribute with it
-
 ## Demo image filter map
 <img src="http://image.prntscr.com/image/1dde328cec344b41944cf47d3cfe1b47.jpeg">
 
